@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Главная страница", 
-		SITE_DIR."/", 
+		SITE_DIR."/index.php", 
 		Array(), 
 		Array(), 
 		"" 
@@ -64,6 +64,13 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"Личный кабинет покупателя", 
+		SITE_DIR."/Buyer-personal-account/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Личный кабинет продавца", 
 		SITE_DIR."/seller-personal-account/", 
 		Array(), 
@@ -71,8 +78,36 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Личный кабинет покупателя", 
-		SITE_DIR."/Buyer-personal-account/", 
+		"Home", 
+		SITE_DIR."/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Properties", 
+		SITE_DIR."properties.html", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"About", 
+		SITE_DIR."about.html", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Contact", 
+		SITE_DIR."contact.html", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Blog", 
+		SITE_DIR."blog.html", 
 		Array(), 
 		Array(), 
 		"" 

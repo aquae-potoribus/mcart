@@ -113,18 +113,21 @@ $myarrfilter = array(
         </div>
     </div>
 </div>
+<?if ($APPLICATION->GetCurPage() != '/') {
 
-<?$APPLICATION->IncludeComponent(
-    "bitrix:breadcrumb",
-    "nav_chain",
-    array(
-        "PATH" => "",
-        "SITE_ID" => "s1",
-        "START_FROM" => "0",
-        "COMPONENT_TEMPLATE" => "nav_chain"
-    ),
-    false
-);?>
+    $APPLICATION->IncludeComponent(
+        "bitrix:breadcrumb",
+        "nav_chain",
+        array(
+            "PATH" => "",
+            "SITE_ID" => "s1",
+            "START_FROM" => "0",
+            "COMPONENT_TEMPLATE" => "nav_chain"
+        ),
+        false
+    );
+}
+?>
 
 
 

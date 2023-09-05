@@ -16,9 +16,7 @@ if(empty($arResult))
 
 <?
 $strReturn = '';
-if ($APPLICATION->GetCurPage() == '/') {
-    return $strReturn;
-}
+
 $css = $APPLICATION->GetCSSArray();
 if(!is_array($css) || !in_array("/bitrix/css/main/font-awesome.css", $css))
 {

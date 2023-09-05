@@ -50,13 +50,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"", 
-		SITE_DIR."", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"О сервисе", 
 		SITE_DIR."/about-service/", 
 		Array(), 
@@ -75,42 +68,7 @@ $aMenuLinks = Array(
 		SITE_DIR."/seller-personal-account/", 
 		Array(), 
 		Array(), 
-		"CSite::InGroup(array(1,6))" 
-	),
-	Array(
-		"Home", 
-		SITE_DIR."/index.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Properties", 
-		SITE_DIR."properties.html", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"About", 
-		SITE_DIR."about.html", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Contact", 
-		SITE_DIR."contact.html", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Blog", 
-		SITE_DIR."blog.html", 
-		Array(), 
-		Array(), 
-		"" 
+		"CSite::InGroup(array(1,6))"
 	)
 );
 ?>

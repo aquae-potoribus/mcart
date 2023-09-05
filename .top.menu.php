@@ -15,22 +15,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Продукция", 
-		SITE_DIR."products/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Услуги", 
 		SITE_DIR."services/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Компания", 
-		SITE_DIR."company/", 
 		Array(), 
 		Array(), 
 		"" 

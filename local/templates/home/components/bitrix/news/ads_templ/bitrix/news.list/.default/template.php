@@ -21,7 +21,6 @@ $this->setFrameMode(true);
 		"EDIT_TEMPLATE" => ""
 	)
 );?>
-<div class="site-section site-section-sm bg-light">
 	<div class="container">
 		<div class="row mb-5">
 			<div class="col-12">

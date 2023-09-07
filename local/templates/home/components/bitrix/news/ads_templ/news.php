@@ -16,6 +16,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<div class="site-section site-section-sm bg-light">
+
 <?
 if($arParams["USE_RSS"]=="Y"):
 	if(method_exists($APPLICATION, 'addheadstring'))

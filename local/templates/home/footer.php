@@ -73,8 +73,8 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/bootstrap-datepicker.min.js"
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/aos.js");
 //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/main.js");
 ?>
-
     <script src="<?= SITE_TEMPLATE_PATH ?>/js/main.js"></script>
+
 
     </body>
 

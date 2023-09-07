@@ -23,6 +23,8 @@
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/style.css");
     ?>
 
+    
+
 <?$APPLICATION->ShowHead();?>
 </head>
 

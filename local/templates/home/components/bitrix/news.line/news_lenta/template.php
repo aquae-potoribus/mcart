@@ -24,11 +24,17 @@ $this->setFrameMode(true);
 		</div>
 		<div class="row mb-5">
 
-	<?foreach($arResult["ITEMS"] as $arItem):?>
+	<?foreach($arResult["ITEMS"] as $arItem):
+//		echo '<pre>';
+//		print_r($arItem);
+//		echo '<pre>';
+		?>
 		<?
 		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 		?>
+
+
 
 		<div id="<?=$this->GetEditAreaId($arItem['ID']);?>" class="col-md-6 col-lg-4 mb-4">
 			<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="prop-entry d-block"> <figure> <img alt="Image" src="<?=$arItem["PREVIEW_PICTURE"]['SRC']?>" class="img-fluid"> </figure>
@@ -59,13 +65,10 @@ $this->setFrameMode(true);
 				</div>
 			</a>
 		</div>
-
-
+	
 <!--		<small><span class="news-date-time">--><?//echo $arItem["DISPLAY_ACTIVE_FROM"]?><!--&nbsp;&nbsp;</span><a href="--><?//echo $arItem["DETAIL_PAGE_URL"]?><!--">--><?//echo $arItem["NAME"]?><!--</a><br /></small>-->
 	<?endforeach;?>
 <!--</div>-->
-
-
 
 		</div>
 	</div>

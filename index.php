@@ -116,22 +116,31 @@ $APPLICATION->SetTitle("HOMESPACE");
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line",
 	"services_templ",
-	Array(
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "300",
 		"CACHE_TYPE" => "A",
 		"COMPONENT_TEMPLATE" => "services_templ",
-		"DETAIL_URL" => "#SITE_DIR#/services/#ELEMENT_CODE#/",
-		"FIELD_CODE" => array(0=>"XML_ID",1=>"NAME",2=>"PROPERTY_LOGO",3=>"PROPERTY_EXTERNAL_LINK",4=>"",),
-		"IBLOCKS" => array(0=>"8",),
+		"DETAIL_URL" => "/services/#ELEMENT_CODE#/",
+		"FIELD_CODE" => array(
+			0 => "XML_ID",
+			1 => "NAME",
+			2 => "PROPERTY_LOGO",
+			3 => "PROPERTY_EXTERNAL_LINK",
+			4 => "",
+		),
+		"IBLOCKS" => array(
+			0 => "8",
+		),
 		"IBLOCK_TYPE" => "srvs",
 		"NEWS_COUNT" => "6",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC"
-	)
+	),
+	false
 );?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line",

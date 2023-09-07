@@ -2,16 +2,8 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Объявления");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "page",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => ""
-	)
-);?><?$APPLICATION->IncludeComponent(
 	"bitrix:news",
-	".default",
+	"ads_templ",
 	Array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -26,15 +18,15 @@ $APPLICATION->SetTitle("Объявления");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "ads_templ",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array(0=>"",1=>"",),
+		"DETAIL_FIELD_CODE" => array(0=>"NAME",1=>"DETAIL_TEXT",2=>"",),
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array(0=>"NUMB_BATHROOMS",1=>"NUMB_FLOORS",2=>"GARAGE",3=>"PRICE",4=>"",),
+		"DETAIL_PROPERTY_CODE" => array(0=>"LOCATION",1=>"NUMB_BATHROOMS",2=>"NUMB_FLOORS",3=>"GARAGE",4=>"SQUARE",5=>"LINKS_EXTERNAL_MATERIALS",6=>"PRICE",7=>"",8=>"",),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -47,18 +39,18 @@ $APPLICATION->SetTitle("Объявления");
 		"IBLOCK_TYPE" => "ads",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "",
-		"LIST_FIELD_CODE" => array(0=>"",1=>"",),
+		"LIST_FIELD_CODE" => array(0=>"",1=>"PROPERTY_PRICE",2=>"PROPERTY_NUMB_FLOORS",3=>"PROPERTY_SQUARE",4=>"PROPERTY_NUMB_BATHROOMS",5=>"PROPERTY_GARAGE",6=>"PROPERTY_LOCATION",7=>"",),
 		"LIST_PROPERTY_CODE" => array(0=>"",1=>"",),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "20",
+		"NEWS_COUNT" => "6",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TEMPLATE" => "my_new_templ",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/ads/",

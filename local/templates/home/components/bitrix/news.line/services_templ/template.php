@@ -24,9 +24,8 @@ $this->setFrameMode(true);
 			</div>
 		</div>
 		<div class="row">
-	<?
-//	echo '<pre>'; print_r($arResult);echo '<pre>';
-	foreach($arResult["ITEMS"] as $arItem):
+			
+	<? foreach($arResult["ITEMS"] as $arItem):
 		?>
 		<?
 		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -34,7 +33,7 @@ $this->setFrameMode(true);
 		?>
 
 		<div id="<?=$this->GetEditAreaId($arItem['ID']);?>" class="col-md-6 col-lg-4 mb-4">
-			<a href="#" class="service text-center border rounded"> <span class="icon flaticon-<?=$arItem['PROPERTY_LOGO_VALUE']?>"></span>
+			<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="service text-center border rounded"> <span class="icon flaticon-<?=$arItem['PROPERTY_LOGO_VALUE']?>"></span>
 				<h2 class="service-heading"><?=$arItem['NAME']?></h2>
 				<p>
 					<span class="read-more"><?=GetMessage("MORE")?></span>

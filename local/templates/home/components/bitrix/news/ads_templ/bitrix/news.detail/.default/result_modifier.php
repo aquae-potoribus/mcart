@@ -7,4 +7,11 @@ foreach ($res as $value) {
     $VALUES[] =	CFile::GetPath($value);
     $arResult["DISPLAY_PROPERTIES"]["IMAGE_GALLERY_ARRAY"] = $VALUES;
 }
+
+$VALUES = array();
+$res = $arResult["PROPERTIES"]["ADDITIONAL_MATERIALS"]["VALUE"];
+foreach ($res as $value) {
+    $VALUES[] =	CFile::GetPath($value);
+    $arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_MATERIALS"] = $VALUES;
+}
 ?>

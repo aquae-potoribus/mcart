@@ -13,9 +13,11 @@
 $this->setFrameMode(true);
 ?>
 <?php
-
+//echo '<pre>';
+//print_r($arResult);
+//echo '</pre>';
 ?>
-<div class="site-blocks-cover overlay" style="background-image: url(<?=SITE_TEMPLATE_PATH?>/images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="site-blocks-cover overlay" style="background-image: url(<?=$arResult["DETAIL_PICTURE"]["SRC"]?>);" data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">
 		<div class="row align-items-center justify-content-center text-center">
 			<div class="col-md-10">
@@ -46,13 +48,13 @@ $this->setFrameMode(true);
 						<div class="col-md-6">
 							<ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
 								<li>
-									<span class="property-specs"><?=GetMessage("BEDS");?></span>
-									<span class="property-specs-number"><?=$arResult["DISPLAY_PROPERTIES"]["NUMB_FLOORS"]["VALUE"]?><sup>+</sup></span>
+									<span class="property-specs"><?=GetMessage("UPDATE_TIME_TITLE");?></span>
+									<span class="property-specs-number"><?=$arResult["TIMESTAMP_X"]?></span>
 
 								</li>
 								<li>
-									<span class="property-specs"><?=GetMessage("BATHS");?></span>
-									<span class="property-specs-number"><?=$arResult["DISPLAY_PROPERTIES"]["NUMB_BATHROOMS"]["VALUE"]?></span>
+									<span class="property-specs"><?=GetMessage("BEDS");?></span>
+									<span class="property-specs-number"><?=$arResult["DISPLAY_PROPERTIES"]["NUMB_FLOORS"]["VALUE"]?><sup>+</sup></span>
 
 								</li>
 								<li>
@@ -64,17 +66,14 @@ $this->setFrameMode(true);
 					</div>
 					<div class="row mb-5">
 						<div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-							<span class="d-inline-block text-black mb-0 caption-text"><?=GetMessage("HOME_TYPE");?></span>
-							<strong class="d-block">Condo</strong>
+							<span class="d-inline-block text-black mb-0 caption-text"><?=GetMessage("BATHS");?></span>
+							<strong class="d-block"><?=$arResult["DISPLAY_PROPERTIES"]["NUMB_BATHROOMS"]["VALUE"]?></strong>
 						</div>
 						<div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-							<span class="d-inline-block text-black mb-0 caption-text"><?=GetMessage("YEAR_BUILT");?></span>
-							<strong class="d-block">2018</strong>
+							<span class="d-inline-block text-black mb-0 caption-text"><?=GetMessage("GARAGES_TITLE");?></span>
+							<strong class="d-block"><?=$arResult["DISPLAY_PROPERTIES"]["GARAGE"]["VALUE"]?></strong>
 						</div>
-						<div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-							<span class="d-inline-block text-black mb-0 caption-text"><?=GetMessage("PRICE_FOR_SQUARE");?></span>
-							<strong class="d-block">$520</strong>
-						</div>
+
 					</div>
 					<h2 class="h4 text-black"><?=GetMessage("DETAIL_TEXT_TITLE");?></h2>
 					<?=$arResult["FIELDS"]["DETAIL_TEXT"]?>
@@ -89,10 +88,14 @@ $this->setFrameMode(true);
 							</div>
 						<?}?>
 
-<!--						<div class="col-sm-6 col-md-4 col-lg-3 mb-4">-->
-<!--							<a href="images/img_4.jpg" class="image-popup gal-item"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>-->
-<!--						</div>-->
 					</div>
+
+					<? foreach ($arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_MATERIALS"] as $src) {?>
+						<p><?=$src?></p>
+					<?}?>
+					<? foreach ($arResult["DISPLAY_PROPERTIES"]["LINKS_EXTERNAL_MATERIALS"]["DISPLAY_VALUE"] as $src) {?>
+						<p><?=$src?></p>
+					<?}?>
 				</div>
 			</div>
 			<div class="col-lg-4 pl-md-5">

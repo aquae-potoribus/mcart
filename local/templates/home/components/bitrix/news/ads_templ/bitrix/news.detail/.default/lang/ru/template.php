@@ -9,4 +9,6 @@ $MESS["HOME_TYPE"] = "HOME TYPE";
 $MESS["YEAR_BUILT"] = "Year Built";
 $MESS["PRICE_FOR_SQUARE"] = "Price/Sqft";
 $MESS["DETAIL_TEXT_TITLE"] = "More Info";
+$MESS["UPDATE_TIME_TITLE"] = "updated";
+$MESS["GARAGES_TITLE"] = "garages";
 ?>

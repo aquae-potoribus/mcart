@@ -91,10 +91,11 @@ $this->setFrameMode(true);
 					</div>
 
 					<? foreach ($arResult["DISPLAY_PROPERTIES"]["ADDITIONAL_MATERIALS"] as $src) {?>
-						<p><?=$src?></p>
+						<a  href="https://<?=SITE_SERVER_NAME?><?=$src?>">https://<?=SITE_SERVER_NAME?><?=$src?></a>
 					<?}?>
-					<? foreach ($arResult["DISPLAY_PROPERTIES"]["LINKS_EXTERNAL_MATERIALS"]["DISPLAY_VALUE"] as $src) {?>
-						<p><?=$src?></p>
+					<? foreach ($arResult["DISPLAY_PROPERTIES"]["LINKS_EXTERNAL_MATERIALS"]["VALUE"] as $src) {?>
+<!--						--><?//print_r($arResult["DISPLAY_PROPERTIES"]["LINKS_EXTERNAL_MATERIALS"]["VALUE"][0])?>
+						<a target="_blank" href="<?=$src?>"><?=$src?></a></br>
 					<?}?>
 				</div>
 			</div>

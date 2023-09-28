@@ -55,6 +55,20 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"", 
+		SITE_DIR."/profile/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Авторизация", 
+		SITE_DIR."/auth.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

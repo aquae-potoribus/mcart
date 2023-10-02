@@ -3,6 +3,17 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("color_menu", "red");
 $APPLICATION->SetTitle("HOMESPACE");
 ?><?$APPLICATION->IncludeComponent(
+	"mcart:agents.list", 
+	".default", 
+	array(
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"ELEMENTS_COUNT" => "5",
+		"HLBLOCK_TNAME" => "agents",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);?><?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"my_filtered_news",
 	Array(

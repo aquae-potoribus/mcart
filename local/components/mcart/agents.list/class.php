@@ -103,9 +103,9 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
             $arParams["CACHE_TIME"] = 36000000;
         }
 
-        if (!isset($arParams["ITEMS_COUNT"]))
+        if (!isset($arParams["ELEMENTS_COUNT"]))
         {
-            $arParams["ITEMS_COUNT"] = 20;
+            $arParams["ELEMENTS_COUNT"] = 20;
         }
 
 
@@ -157,7 +157,7 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
             $this->taggedCache->registerTag('hlblock_table_name_' . $arHlblock['TABLE_NAME']); // Регистрируем кещ, чтобы по нему на событиях добавление/изменение/удаление элементов хлблока сбрасывать кеш компонента
 
             $entity = self::getEntityDataClassById($arHlblock); // получить класс для работы с хлблоком
-            $arTypeAgents = self::getFieldListValue($arHlblock, 'UF_JOB'); // получить массив со значениями списочного свойства Виды деятельности агентов
+            $arTypeAgents = self::getFieldListValue($arHlblock, 'UF_TYPE_ACTIVITY'); // получить массив со значениями списочного свойства Виды деятельности агентов
             $this->arResult['AGENTS'] = $this->getAgents($entity, $arTypeAgents); // получить массив со списком агентов и объектом для пагинации
 
 
@@ -289,7 +289,7 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
         // Объек для для пагинации, подробнее можно почитать
         $nav = new \Bitrix\Main\UI\PageNavigation("nav-agents");
         $nav->allowAllRecords(true)
-            ->setPageSize($this->arParams['ITEMS_COUNT']) //Нужно передать параметр Количество элементов из мввсива $this->arParams
+            ->setPageSize($this->arParams['ELEMENTS_COUNT']) //Нужно передать параметр Количество элементов из мввсива $this->arParams
             ->initFromUri();
 
 
@@ -317,8 +317,8 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
              * если значение есть, то получить путь через класс \CFile
              */
 
-            $arAgent['UF_JOB'] = $arTypeAgents[$arAgent['UF_JOB']];
-            if ($arAgent['UF_PHOTO']) $arAgent['UF_PHOTO'] = CFile::GetFileArray($arAgent['UF_PHOTO'])['SRC'];
+            $arAgent['UF_TYPE_ACTIVITY'] = $arTypeAgents[$arAgent['UF_TYPE_ACTIVITY']];
+            if ($arAgent['UF_AVATAR']) $arAgent['UF_AVATAR'] = CFile::GetFileArray($arAgent['UF_AVATAR'])['SRC'];
 
 
             $arAgents['ITEMS'][$arAgent['ID']] = $arAgent; // Записываем получившийся массив в $arAgents['ITEMS']

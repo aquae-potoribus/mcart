@@ -1,8 +1,8 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Анонсы", 
-		SITE_DIR."/partneram/raspisanie-meropriyatiy/", 
+		"Условия сотрудничества",
+		SITE_DIR."/partneram/index.php",
 		Array(), 
 		Array(), 
 		"" 
@@ -13,6 +13,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Расписание мероприятий",
+		SITE_DIR."/partneram/raspisanie-meropriyatiy/",
+		Array(),
+		Array(),
+		""
 	)
 );
 ?>

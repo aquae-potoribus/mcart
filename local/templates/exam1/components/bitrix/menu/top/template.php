@@ -22,23 +22,22 @@
             <?= str_repeat("</ul></li>", ($previousLevel - $arItem["DEPTH_LEVEL"])); ?>
         <? endif ?>
 
-        <? if ($arItem["IS_PARENT"]):?>
+        <? if ($arItem["PERMISSION"] > "D"):?>
+            <? if ($arItem["IS_PARENT"]):?>
 
-            <? if ($arItem["DEPTH_LEVEL"] == 1):?>
-                <li><a href="<?= $arItem["LINK"] ?>" class=""><?= $arItem["TEXT"] ?></a>
-                <ul>
+                <? if ($arItem["DEPTH_LEVEL"] == 1):?>
+                    <li><a href="<?= $arItem["LINK"] ?>" class=""><?= $arItem["TEXT"] ?></a>
+                    <ul>
+                <? else:?>
+                    <li><a href="<?= $arItem["LINK"] ?>" class=""><?= $arItem["TEXT"] ?></a>
+                    <ul>
+                <? endif ?>
+
+                <? if (isset($arItem["PARAMS"]["ITEM_DESCR"])) {?>
+                    <div class="menu-text"><?=$arItem["PARAMS"]["ITEM_DESCR"]?></div>
+                <?}?>
+
             <? else:?>
-                <li><a href="<?= $arItem["LINK"] ?>" class=""><?= $arItem["TEXT"] ?></a>
-                <ul>
-            <? endif ?>
-
-            <? if (isset($arItem["PARAMS"]["ITEM_DESCR"])) {?>
-                <div class="menu-text"><?=$arItem["PARAMS"]["ITEM_DESCR"]?></div>
-            <?}?>
-
-
-        <? else:?>
-            <? if ($arItem["PERMISSION"] > "D"):?>
 
                 <? if ($arItem["DEPTH_LEVEL"] == 1):?>
                     <li><a href="<?= $arItem["LINK"] ?>"
@@ -51,14 +50,8 @@
                     <div class="menu-text"><?=$arItem["PARAMS"]["ITEM_DESCR"]?></div>
                 <?}?>
 
-            <? else:?>
-
-
-
             <? endif ?>
-
         <? endif ?>
-
         <? $previousLevel = $arItem["DEPTH_LEVEL"]; ?>
 
     <? endforeach ?>

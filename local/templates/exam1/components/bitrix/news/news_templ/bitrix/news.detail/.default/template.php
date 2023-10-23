@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?php //d($arResult)?>
+<?php d($arResult)?>
 <div class="review-block">
 	<div class="review-text">
 		<div class="review-text-cont">
@@ -31,9 +31,21 @@ $this->setFrameMode(true);
 <div class="exam-review-doc">
 	<? if ($arResult['DISPLAY_PROPERTIES']['FILES']['VALUE'] <> false) {
 		?><p><?=GetMessage("DOCUMENT_TITLE");?>:</p><?
-		foreach ($arResult['DISPLAY_PROPERTIES']['FILES']['FILE_VALUE'] as $FileId) {
+		if (count($arResult['DISPLAY_PROPERTIES']['FILES']['VALUE']) <> 1) {
+			$massiv = $arResult['DISPLAY_PROPERTIES']['FILES']['FILE_VALUE'];
+		} else {
+			$massiv = array(
+				"SRC"=>$arResult['DISPLAY_PROPERTIES']['FILES']['FILE_VALUE'],
+				"ORIGINAL_NAME"=>$arResult['DISPLAY_PROPERTIES']['FILES']['FILE_VALUE']
+			);
+		}
+		?>
+
+		<?
+		foreach ($massiv as $FileId) {
 			$srcFile = $FileId["SRC"];
 			$NameFile = $FileId["ORIGINAL_NAME"];
+
 		?>
 
 		<div  class="exam-review-item-doc"><img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/pdf_ico_40.png"><a href="<?=$srcFile?>" download><?=$NameFile?></a></div>

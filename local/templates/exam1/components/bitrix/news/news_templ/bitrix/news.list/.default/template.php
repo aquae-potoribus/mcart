@@ -36,8 +36,9 @@ $this->setFrameMode(true);
 				<?=$arItem["FIELDS"]["PREVIEW_TEXT"]?>
 			</div>
 		</div>
-		<div class="review-img-wrap"><a href="#"><img src="<? if (isset($arItem["PREVIEW_PICTURE"]["SRC"])) {
-				echo $arItem["PREVIEW_PICTURE"]["SRC"];
+		<div class="review-img-wrap"><a href="#"><img src="<? if (isset($arItem['FIELDS']['DETAIL_PICTURE']['ID'])) {
+				echo CFile::ResizeImageGet($arItem['FIELDS']['DETAIL_PICTURE']['ID'], array('width'=>68, 'height'=>50), BX_RESIZE_IMAGE_EXACT , true)['src'];
+//				$arItem["PREVIEW_PICTURE"]["SRC"];
 			} else {
 				echo SITE_TEMPLATE_PATH."/img/no_photo.jpg";
 		}?>" alt="img"></a></div>

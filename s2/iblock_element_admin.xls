@@ -1,0 +1,12 @@
+
+		<html>
+		<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style>
+			td {mso-number-format:\@;}
+			.number0 {mso-number-format:0;}
+			.number2 {mso-number-format:Fixed;}
+		</style>
+		</head>
+		<body><table border="1"><tr><td>Название</td><td>ID</td><td>Активность</td><td>Начало активности</td><td>Должность</td><td>Компания</td></tr><tr><td>test</td><td align="right" class="number0">68</td><td align="center">Да</td><td>04.10.2023 14:04:00</td><td align="left">test</td><td align="left">test</td></tr><tr><td>Анна Андреева</td><td align="right" class="number0">66</td><td align="center">Да</td><td>10.04.2017 14:21:00</td><td align="left">Маркетолог</td><td align="left">RK-Telecom</td></tr><tr><td>Cергей Родионов</td><td align="right" class="number0">65</td><td align="center">Да</td><td>17.04.2017 14:21:00</td><td align="left">Генеральный директор</td><td align="left">CTC-Медиа</td></tr><tr><td>Дмитрия Пялов</td><td align="right" class="number0">67</td><td align="center">Да</td><td>24.04.2017 14:21:00</td><td align="left">программист</td><td align="left">.NET-девелопмент</td></tr></table></body></html>

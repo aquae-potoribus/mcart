@@ -26,10 +26,10 @@
             <? if ($arItem["IS_PARENT"]):?>
 
                 <? if ($arItem["DEPTH_LEVEL"] == 1):?>
-                    <li><a href="<?= $arItem["LINK"] ?>" class=""><?= $arItem["TEXT"] ?></a>
+                    <li><a href="<?= $arItem["LINK"] ?>" class="<?= isset($arItem['PARAMS']['ITEM_COLOR']) ? 'color-'.$arItem['PARAMS']['ITEM_COLOR'] : ''?>"><?= $arItem["TEXT"] ?></a>
                     <ul>
                 <? else:?>
-                    <li><a href="<?= $arItem["LINK"] ?>" class=""><?= $arItem["TEXT"] ?></a>
+                    <li><a href="<?= $arItem["LINK"] ?>" class="<?= isset($arItem['PARAMS']['ITEM_COLOR']) ? 'color-'.['PARAMS']['ITEM_COLOR'] : ''?>"><?= $arItem["TEXT"] ?></a>
                     <ul>
                 <? endif ?>
 
@@ -41,10 +41,10 @@
 
                 <? if ($arItem["DEPTH_LEVEL"] == 1):?>
                     <li><a href="<?= $arItem["LINK"] ?>"
-                           class=""><?= $arItem["TEXT"] ?></a>
+                           class="<?= isset($arItem['PARAMS']['ITEM_COLOR']) ? 'color-'.$arItem['PARAMS']['ITEM_COLOR'] : ''?>"><?= $arItem["TEXT"] ?></a>
                     </li>
                 <? else:?>
-                    <li><a href="<?= $arItem["LINK"] ?>"><?= $arItem["TEXT"] ?></a></li>
+                    <li><a href="<?= $arItem["LINK"] ?>" class="<?= isset($arItem['PARAMS']['ITEM_COLOR']) ? 'color-'.$arItem['PARAMS']['ITEM_COLOR'] : ''?>"><?= $arItem["TEXT"] ?></a></li>
                 <? endif ?>
                 <? if (isset($arItem["PARAMS"]["ITEM_DESCR"])) {?>
                     <div class="menu-text"><?=$arItem["PARAMS"]["ITEM_DESCR"]?></div>

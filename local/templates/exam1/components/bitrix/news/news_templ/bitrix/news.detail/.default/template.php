@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?php d($arResult)?>
+<?php //d($arResult)?>
 <div class="review-block">
 	<div class="review-text">
 		<div class="review-text-cont">
@@ -30,14 +30,14 @@ $this->setFrameMode(true);
 </div>
 <div class="exam-review-doc">
 	<? if ($arResult['DISPLAY_PROPERTIES']['FILES']['VALUE'] <> false) {
+		$massiv= array();
+		$buf= "";
 		?><p><?=GetMessage("DOCUMENT_TITLE");?>:</p><?
 		if (count($arResult['DISPLAY_PROPERTIES']['FILES']['VALUE']) <> 1) {
 			$massiv = $arResult['DISPLAY_PROPERTIES']['FILES']['FILE_VALUE'];
 		} else {
-			$massiv = array(
-				"SRC"=>$arResult['DISPLAY_PROPERTIES']['FILES']['FILE_VALUE'],
-				"ORIGINAL_NAME"=>$arResult['DISPLAY_PROPERTIES']['FILES']['FILE_VALUE']
-			);
+			$massiv[] = $arResult['DISPLAY_PROPERTIES']['FILES']['FILE_VALUE'];
+
 		}
 		?>
 
